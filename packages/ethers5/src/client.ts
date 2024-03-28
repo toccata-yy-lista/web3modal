@@ -29,6 +29,7 @@ import {
   EthersStoreUtil
 } from '@web3modal/scaffold-utils/ethers'
 import type { EthereumProviderOptions } from '@walletconnect/ethereum-provider'
+import { isTrustProvider } from './utils/helper.js'
 
 // -- Types ---------------------------------------------------------------------
 export interface Web3ModalClientOptions extends Omit<LibraryOptions, 'defaultChain' | 'tokens'> {
@@ -245,7 +246,8 @@ export class Web3Modal extends Web3ModalScaffold {
           const WalletConnectProvider = provider
           await (WalletConnectProvider as unknown as EthereumProvider).disconnect()
         } else if (provider) {
-          provider?.emit('disconnect')
+          window.dispatchEvent(new CustomEvent('walletdisconnect'))
+          provider?.emit?.('disconnect')
         }
       },
 
@@ -372,7 +374,8 @@ export class Web3Modal extends Web3ModalScaffold {
     EthersStoreUtil.reset()
 
     if (providerType === 'injected' || providerType === 'eip6963') {
-      provider?.emit('disconnect')
+      window.dispatchEvent(new CustomEvent('walletdisconnect'))
+      provider?.emit?.('disconnect')
     } else {
       await (provider as unknown as EthereumProvider).disconnect()
     }
@@ -585,6 +588,7 @@ export class Web3Modal extends Web3ModalScaffold {
     }
 
     if (WalletConnectProvider) {
+      window.addEventListener('walletdisconnect', disconnectHandler);
       WalletConnectProvider.on('disconnect', disconnectHandler)
       WalletConnectProvider.on('accountsChanged', accountsChangedHandler)
       WalletConnectProvider.on('chainChanged', chainChangedHandler)
@@ -624,6 +628,7 @@ export class Web3Modal extends Web3ModalScaffold {
     }
 
     if (InjectedProvider) {
+      window.addEventListener('walletdisconnect', disconnectHandler);
       InjectedProvider.on('disconnect', disconnectHandler)
       InjectedProvider.on('accountsChanged', accountsChangedHandler)
       InjectedProvider.on('chainChanged', chainChangedHandler)
@@ -635,9 +640,19 @@ export class Web3Modal extends Web3ModalScaffold {
       localStorage.removeItem(EthersConstantsUtil.WALLET_ID)
       EthersStoreUtil.reset()
 
-      provider.removeListener('disconnect', disconnectHandler)
-      provider.removeListener('accountsChanged', accountsChangedHandler)
-      provider.removeListener('chainChanged', chainChangedHandler)
+      if (isTrustProvider(provider)) {
+        try {
+          provider?.off('disconnect', disconnectHandler)
+          provider?.off('accountsChanged', accountsChangedHandler)
+          provider?.off('chainChanged', chainChangedHandler)
+        } catch {
+          // Empty
+        }
+      } else {
+        provider.removeListener('disconnect', disconnectHandler)
+        provider.removeListener('accountsChanged', accountsChangedHandler)
+        provider.removeListener('chainChanged', chainChangedHandler)
+      }
     }
 
     function accountsChangedHandler(accounts: string[]) {
@@ -660,6 +675,7 @@ export class Web3Modal extends Web3ModalScaffold {
       }
     }
 
+    window.addEventListener('walletdisconnect', disconnectHandler);
     provider.on('disconnect', disconnectHandler)
     provider.on('accountsChanged', accountsChangedHandler)
     provider.on('chainChanged', chainChangedHandler)
@@ -695,6 +711,7 @@ export class Web3Modal extends Web3ModalScaffold {
     }
 
     if (CoinbaseProvider) {
+      window.addEventListener('walletdisconnect', disconnectHandler);
       CoinbaseProvider.on('disconnect', disconnectHandler)
       CoinbaseProvider.on('accountsChanged', accountsChangedHandler)
       CoinbaseProvider.on('chainChanged', chainChangedHandler)

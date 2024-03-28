@@ -221,7 +221,7 @@ export class W3mConnectView extends LitElement {
 
   private forceWalletOrderTemplate() {
     // eslint-disable-next-line no-console
-    console.log('debugger: forceWalletOrderTemplate')
+    console.info('debugger: forceWalletOrderTemplate')
     const connector = this.connectors.find(c => c.type === 'WALLET_CONNECT')
     if (!connector) {
       return null
