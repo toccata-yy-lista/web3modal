@@ -29,7 +29,7 @@ export const EventsController = {
   state,
 
   subscribe(callback: (newState: EventsControllerState) => void) {
-    return sub(state, () => callback(state))
+    return sub(state, () => callback(state), true)
   },
 
   _getApiHeaders() {

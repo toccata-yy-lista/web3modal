@@ -6,6 +6,7 @@ const WC_DEEPLINK = 'WALLETCONNECT_DEEPLINK_CHOICE'
 const W3M_RECENT = '@w3m/recent'
 const W3M_CONNECTED_WALLET_IMAGE_URL = '@w3m/connected_wallet_image_url'
 const W3M_CONNECTED_CONNECTOR = '@w3m/connected_connector'
+const W3M_CONNECTED_WALLET = '@w3m/connected_wallet'
 
 // -- Utility -----------------------------------------------------------------
 export const StorageUtil = {
@@ -100,5 +101,25 @@ export const StorageUtil = {
     }
 
     return undefined
-  }
+  },
+
+  setConnectedWallet(wallet: WcWallet) {
+    try {
+      localStorage.setItem(W3M_CONNECTED_WALLET, JSON.stringify(wallet))
+    } catch {
+      console.info('Unable to set Connected Wallet')
+    }
+  },
+
+  getConnectedWallet() {
+    try {
+      const walletStr = localStorage.getItem(W3M_CONNECTED_WALLET)
+
+      return walletStr ? JSON.parse(walletStr) as WcWallet : undefined
+    } catch {
+      console.info('Unable to get Connected Wallet')
+    }
+
+    return undefined
+  },
 }

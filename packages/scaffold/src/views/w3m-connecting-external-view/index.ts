@@ -36,6 +36,14 @@ export class W3mConnectingExternalView extends W3mConnectingWidget {
     try {
       this.error = false
       if (this.connector) {
+        StorageUtil.setConnectedWallet({
+          id: this.connector.id,
+          name: this.connector.name || '',
+          image_id: this.connector.imageId,
+          image_url: this.connector.imageUrl,
+          rdns: this.connector.info?.rdns,
+        })
+
         if (this.connector.imageUrl) {
           StorageUtil.setConnectedWalletImageUrl(this.connector.imageUrl)
         }

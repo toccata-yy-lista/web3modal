@@ -61,6 +61,7 @@ export class W3mConnectingWcView extends LitElement {
       if (retry || CoreHelperUtil.isPairingExpired(wcPairingExpiry)) {
         ConnectionController.connectWalletConnect()
         if (this.wallet) {
+          StorageUtil.setConnectedWallet(this.wallet)
           const url = AssetUtil.getWalletImage(this.wallet)
           if (url) {
             StorageUtil.setConnectedWalletImageUrl(url)
