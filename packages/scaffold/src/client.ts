@@ -39,7 +39,7 @@ export interface LibraryOptions {
   includeWalletIds?: OptionsControllerState['includeWalletIds']
   excludeWalletIds?: OptionsControllerState['excludeWalletIds']
   featuredWalletIds?: OptionsControllerState['featuredWalletIds']
-  forceWalletOrder?: OptionsControllerState['forceWalletOrder']
+  overrideWallets?: OptionsControllerState['overrideWallets']
   defaultChain?: NetworkControllerState['caipNetwork']
   tokens?: OptionsControllerState['tokens']
   termsConditionsUrl?: OptionsControllerState['termsConditionsUrl']
@@ -217,7 +217,7 @@ export class Web3ModalScaffold {
     OptionsController.setIncludeWalletIds(options.includeWalletIds)
     OptionsController.setExcludeWalletIds(options.excludeWalletIds)
     OptionsController.setFeaturedWalletIds(options.featuredWalletIds)
-    OptionsController.setForceWalletOrder(options.forceWalletOrder)
+    OptionsController.setOverrideWallets(options.overrideWallets)
     OptionsController.setTokens(options.tokens)
     OptionsController.setTermsConditionsUrl(options.termsConditionsUrl)
     OptionsController.setPrivacyPolicyUrl(options.privacyPolicyUrl)

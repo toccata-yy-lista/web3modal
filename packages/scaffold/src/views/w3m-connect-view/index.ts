@@ -40,14 +40,14 @@ export class W3mConnectView extends LitElement {
 
   // -- Render -------------------------------------------- //
   public override render() {
-    const { forceWalletOrder } = OptionsController.state
+    const { overrideWallets } = OptionsController.state
 
-    if (forceWalletOrder) {
+    if (overrideWallets) {
       return html`
         <wui-flex flexDirection="column" padding="s" gap="xs">
           <w3m-email-login-widget></w3m-email-login-widget>
 
-          ${this.forceWalletOrderTemplate()}
+          ${this.overrideWalletsTemplate()}
           ${this.allWalletsTemplate()}
         </wui-flex>
         <w3m-legal-footer></w3m-legal-footer>
@@ -219,19 +219,20 @@ export class W3mConnectView extends LitElement {
     })
   }
 
-  private forceWalletOrderTemplate() {
+  private overrideWalletsTemplate() {
     // eslint-disable-next-line no-console
-    console.info('debugger: forceWalletOrderTemplate')
+    console.info('debugger: overrideWalletsTemplate')
     const connector = this.connectors.find(c => c.type === 'WALLET_CONNECT')
     if (!connector) {
       return null
     }
 
-    const { forceWalletOrder } = OptionsController.state
+    const isMobile = CoreHelperUtil.isMobile()
+    const { overrideWallets } = OptionsController.state
     const { featured } = ApiController.state
-    const { customWallets } = OptionsController.state
 
-    return forceWalletOrder?.map(id => {
+    return overrideWallets?.map((walletInfo) => {
+      const { id } = walletInfo
       if (id === 'INJECTED') {
         const injectedConnector =  this.connectors.find(
           c => c.type === 'INJECTED' && ConnectionController.checkInstalled()
@@ -270,26 +271,17 @@ export class W3mConnectView extends LitElement {
         `
       }
 
-      const featuredWallet = featured?.find(wallet => wallet.id === id);
+      const featuredWallet = featured?.find(wallet => wallet.id === id)
       if (featuredWallet) {
+        if (walletInfo?.hiddenOnMobile && isMobile || walletInfo?.hiddenOnDesktop && !isMobile) {
+          return null
+        }
+
         return html`
           <wui-list-wallet
             imageSrc=${ifDefined(AssetUtil.getWalletImage(featuredWallet))}
             name=${featuredWallet.name ?? 'Unknown'}
             @click=${() => this.onConnectWallet(featuredWallet)}
-          >
-          </wui-list-wallet>
-        `
-      }
-
-      const customWallet = customWallets?.find(wallet => wallet.id === id);
-      if (customWallet) {
-        return html`
-          <wui-list-wallet
-            imageSrc=${ifDefined(AssetUtil.getWalletImage(customWallet))}
-            name=${customWallet.name ?? 'Unknown'}
-            @click=${() => this.onConnectWallet(customWallet)}
-            data-testid=${`wallet-selector-${customWallet.id}`}
           >
           </wui-list-wallet>
         `

@@ -1,6 +1,6 @@
 import { subscribeKey as subKey } from 'valtio/utils'
 import { proxy } from 'valtio/vanilla'
-import type { CustomWallet, Metadata, ProjectId, SdkVersion, Tokens } from '../utils/TypeUtil.js'
+import type { CustomWallet, Metadata, ProjectId, SdkVersion, Tokens, OverrideWallet } from '../utils/TypeUtil.js'
 
 // -- Types --------------------------------------------- //
 export interface OptionsControllerState {
@@ -11,7 +11,7 @@ export interface OptionsControllerState {
   featuredWalletIds?: string[]
   includeWalletIds?: string[]
   excludeWalletIds?: string[]
-  forceWalletOrder?: string[];
+  overrideWallets?: OverrideWallet[];
   tokens?: Tokens
   customWallets?: CustomWallet[]
   termsConditionsUrl?: string
@@ -60,8 +60,8 @@ export const OptionsController = {
     state.featuredWalletIds = featuredWalletIds
   },
 
-  setForceWalletOrder(forceWalletIds: OptionsControllerState['forceWalletOrder']) {
-    state.forceWalletOrder = forceWalletIds
+  setOverrideWallets(overrideWallets: OptionsControllerState['overrideWallets']) {
+    state.overrideWallets = overrideWallets
   },
 
   setTokens(tokens: OptionsControllerState['tokens']) {

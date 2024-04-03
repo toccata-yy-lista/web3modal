@@ -94,6 +94,11 @@ export interface WcWallet {
     | null
 }
 
+export interface OverrideWallet extends Partial<WcWallet> {
+  hiddenOnMobile?: boolean
+  hiddenOnDesktop?: boolean
+}
+
 export interface ApiGetWalletsRequest {
   page: number
   entries: number

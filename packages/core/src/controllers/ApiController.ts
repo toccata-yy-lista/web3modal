@@ -118,7 +118,7 @@ export const ApiController = {
   },
 
   async fetchFeaturedWallets() {
-    const { featuredWalletIds } = OptionsController.state
+    const { featuredWalletIds, overrideWallets } = OptionsController.state
     if (featuredWalletIds?.length) {
       const { data } = await api.get<ApiGetWalletsResponse>({
         path: '/getWallets',
@@ -131,10 +131,17 @@ export const ApiController = {
           include: featuredWalletIds?.join(',')
         }
       })
-      data.sort((a, b) => featuredWalletIds.indexOf(a.id) - featuredWalletIds.indexOf(b.id))
-      const images = data.map(d => d.image_id).filter(Boolean)
+
+      const overrideData = data.map(d => {
+        const override = overrideWallets?.find(o => o.id === d.id)
+
+        return { ...d, ...override} as WcWallet
+      })
+
+      overrideData.sort((a, b) => featuredWalletIds.indexOf(a.id) - featuredWalletIds.indexOf(b.id))
+      const images = overrideData.map(d => d.image_id).filter(Boolean)
       await Promise.allSettled((images as string[]).map(id => ApiController._fetchWalletImage(id)))
-      state.featured = data
+      state.featured = overrideData
     }
   },
 
