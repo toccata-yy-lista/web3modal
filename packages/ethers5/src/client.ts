@@ -299,7 +299,6 @@ export class Web3Modal extends Web3ModalScaffold {
     if (ethersConfig.EIP6963) {
       if (typeof window !== 'undefined') {
         this.listenConnectors(ethersConfig.EIP6963)
-        this.checkActive6963Provider()
       }
     }
 
@@ -997,6 +996,8 @@ export class Web3Modal extends Web3ModalScaffold {
           this.EIP6963Providers.push(eip6963ProviderObj)
         }
       }
+
+      this.checkActive6963Provider()
     }
   }
 

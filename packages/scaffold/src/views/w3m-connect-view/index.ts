@@ -271,23 +271,21 @@ export class W3mConnectView extends LitElement {
         `
       }
 
-      const featuredWallet = featured?.find(wallet => wallet.id === id)
-      if (featuredWallet) {
-        if (walletInfo?.hiddenOnMobile && isMobile || walletInfo?.hiddenOnDesktop && !isMobile) {
-          return null
-        }
-
-        return html`
-          <wui-list-wallet
-            imageSrc=${ifDefined(AssetUtil.getWalletImage(featuredWallet))}
-            name=${featuredWallet.name ?? 'Unknown'}
-            @click=${() => this.onConnectWallet(featuredWallet)}
-          >
-          </wui-list-wallet>
-        `
+      if (walletInfo?.hiddenOnMobile && isMobile || walletInfo?.hiddenOnDesktop && !isMobile) {
+        return null
       }
 
-      return null
+      const featuredWallet = featured?.find(wallet => wallet.id === id)
+      const walletInfoWithFeatured = { ...featuredWallet, ...walletInfo } as WcWallet
+
+      return html`
+        <wui-list-wallet
+          imageSrc=${ifDefined(AssetUtil.getWalletImage(walletInfoWithFeatured))}
+          name=${walletInfoWithFeatured.name ?? 'Unknown'}
+          @click=${() => this.onConnectWallet(walletInfoWithFeatured)}
+        >
+        </wui-list-wallet>
+      `
     })
   }
 

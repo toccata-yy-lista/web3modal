@@ -127,9 +127,9 @@ export class W3mConnectingWcView extends LitElement {
       return
     }
 
-    const { mobile_link, desktop_link, webapp_link, injected, rdns } = this.wallet
+    const { mobile_link, desktop_link, webapp_link, injected } = this.wallet
     const injectedIds = injected?.map(({ injected_id }) => injected_id).filter(Boolean) as string[]
-    const browserIds = rdns ? [rdns] : injectedIds ?? []
+    const browserIds = injectedIds
     const isBrowser = browserIds.length
     const isMobileWc = mobile_link
     const isWebWc = webapp_link
