@@ -9,7 +9,7 @@ import type {
   ThemeMode,
   ThemeVariables,
   ModalControllerState
-} from '@web3modal/core'
+} from '@lista-wallet/core'
 import {
   AccountController,
   BlockchainApiController,
@@ -23,9 +23,9 @@ import {
   PublicStateController,
   ThemeController,
   SnackController
-} from '@web3modal/core'
-import { setColorTheme, setThemeVariables } from '@web3modal/ui'
-import type { SIWEControllerClient } from '@web3modal/siwe'
+} from '@lista-wallet/core'
+import { setColorTheme, setThemeVariables } from '@lista-wallet/ui'
+import type { SIWEControllerClient } from '@lista-wallet/siwe'
 
 // -- Helpers -------------------------------------------------------------------
 let isInitialized = false
@@ -228,7 +228,7 @@ export class Web3ModalScaffold {
     ConnectionController.setClient(options.connectionControllerClient)
 
     if (options.siweControllerClient) {
-      const { SIWEController } = await import('@web3modal/siwe')
+      const { SIWEController } = await import('@lista-wallet/siwe')
 
       SIWEController.setSIWEClient(options.siweControllerClient)
     }
@@ -262,7 +262,7 @@ export class Web3ModalScaffold {
     if (!this.initPromise && !isInitialized && CoreHelperUtil.isClient()) {
       isInitialized = true
       this.initPromise = new Promise<void>(async resolve => {
-        await Promise.all([import('@web3modal/ui'), import('./modal/w3m-modal/index.js')])
+        await Promise.all([import('@lista-wallet/ui'), import('./modal/w3m-modal/index.js')])
         const modal = document.createElement('w3m-modal')
         document.body.insertAdjacentElement('beforeend', modal)
         resolve()

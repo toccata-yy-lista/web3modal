@@ -1,4 +1,4 @@
-import type { Provider } from '@web3modal/scaffold-utils/ethers'
+import type { Provider } from '@lista-wallet/scaffold-utils/ethers'
 
 interface TrustProvider extends Provider {
   off: <T>(event: string, listener: (data: T) => void) => void

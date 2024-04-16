@@ -1,5 +1,5 @@
-import '@web3modal/polyfills'
-import type { Metadata, Provider, ProviderType } from '@web3modal/scaffold-utils/ethers'
+import '@lista-wallet/polyfills'
+import type { Metadata, Provider, ProviderType } from '@lista-wallet/scaffold-utils/ethers'
 import { CoinbaseWalletSDK } from '@coinbase/wallet-sdk'
 
 export interface ConfigOptions {

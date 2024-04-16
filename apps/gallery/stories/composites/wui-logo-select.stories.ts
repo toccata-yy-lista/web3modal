@@ -1,6 +1,6 @@
 import type { Meta } from '@storybook/web-components'
-import '@web3modal/ui/src/composites/wui-logo-select'
-import type { WuiLogoSelect } from '@web3modal/ui/src/composites/wui-logo-select'
+import '@lista-wallet/ui/src/composites/wui-logo-select'
+import type { WuiLogoSelect } from '@lista-wallet/ui/src/composites/wui-logo-select'
 import { html } from 'lit'
 import { logoOptions } from '../../utils/PresetUtils'
 

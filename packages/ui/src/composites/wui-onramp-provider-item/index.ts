@@ -1,6 +1,6 @@
 import { html, LitElement } from 'lit'
 import { property } from 'lit/decorators.js'
-import { AssetUtil, NetworkController, type OnRampProvider } from '@web3modal/core'
+import { AssetUtil, NetworkController, type OnRampProvider } from '@lista-wallet/core'
 import '../../components/wui-icon/index.js'
 import '../../components/wui-text/index.js'
 import { elementStyles, resetStyles } from '../../utils/ThemeUtil.js'

@@ -8,12 +8,12 @@ import {
   RouterController,
   SnackController,
   ThemeController
-} from '@web3modal/core'
-import { UiHelperUtil, customElement, initializeTheming } from '@web3modal/ui'
+} from '@lista-wallet/core'
+import { UiHelperUtil, customElement, initializeTheming } from '@lista-wallet/ui'
 import { LitElement, html } from 'lit'
 import { state } from 'lit/decorators.js'
 import styles from './styles.js'
-import type { AccountControllerState } from '@web3modal/core'
+import type { AccountControllerState } from '@lista-wallet/core'
 
 // -- Helpers --------------------------------------------- //
 const SCROLL_LOCK = 'scroll-lock'
@@ -74,7 +74,7 @@ export class W3mModal extends LitElement {
 
   private async handleClose() {
     if (this.isSiweEnabled) {
-      const { SIWEController } = await import('@web3modal/siwe')
+      const { SIWEController } = await import('@lista-wallet/siwe')
 
       if (SIWEController.state.status !== 'success') {
         await ConnectionController.disconnect()
@@ -165,7 +165,7 @@ export class W3mModal extends LitElement {
     const { isConnected, caipAddress: newCaipAddress } = newState
 
     if (this.isSiweEnabled) {
-      const { SIWEController } = await import('@web3modal/siwe')
+      const { SIWEController } = await import('@lista-wallet/siwe')
 
       if (isConnected && !this.caipAddress) {
         this.caipAddress = newCaipAddress

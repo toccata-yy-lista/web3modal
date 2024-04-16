@@ -1,4 +1,4 @@
-import type { BaseError, Platform } from '@web3modal/core'
+import type { BaseError, Platform } from '@lista-wallet/core'
 import {
   AssetUtil,
   ConnectionController,
@@ -11,8 +11,8 @@ import {
   RouterController,
   SnackController,
   StorageUtil
-} from '@web3modal/core'
-import { customElement } from '@web3modal/ui'
+} from '@lista-wallet/core'
+import { customElement } from '@lista-wallet/ui'
 import { LitElement, html } from 'lit'
 import { state } from 'lit/decorators.js'
 

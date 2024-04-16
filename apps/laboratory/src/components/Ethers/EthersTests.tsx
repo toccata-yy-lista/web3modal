@@ -1,4 +1,4 @@
-import { useWeb3ModalAccount } from '@web3modal/ethers/react'
+import { useWeb3ModalAccount } from '@lista-wallet/ethers/react'
 import { EthersSignMessageTest } from './EthersSignMessageTest'
 import { EthersSignTypedDataTest } from './EthersSignTypedDataTest'
 import { StackDivider, Card, CardHeader, Heading, CardBody, Box, Stack } from '@chakra-ui/react'

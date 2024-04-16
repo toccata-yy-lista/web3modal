@@ -1,5 +1,5 @@
-import { CoreHelperUtil } from '@web3modal/core'
-import { customElement } from '@web3modal/ui'
+import { CoreHelperUtil } from '@lista-wallet/core'
+import { customElement } from '@lista-wallet/ui'
 import { LitElement, html } from 'lit'
 
 const data = [

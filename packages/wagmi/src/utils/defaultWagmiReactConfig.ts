@@ -1,4 +1,4 @@
-import '@web3modal/polyfills'
+import '@lista-wallet/polyfills'
 
 import type { CreateConfigParameters, CreateConnectorFn, Config } from 'wagmi'
 import { createConfig } from 'wagmi'

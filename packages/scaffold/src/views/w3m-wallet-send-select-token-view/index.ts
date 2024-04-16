@@ -1,4 +1,4 @@
-import { customElement } from '@web3modal/ui'
+import { customElement } from '@lista-wallet/ui'
 import { LitElement, html } from 'lit'
 import styles from './styles.js'
 import {
@@ -6,10 +6,10 @@ import {
   CoreHelperUtil,
   RouterController,
   SendController
-} from '@web3modal/core'
+} from '@lista-wallet/core'
 
 import { state } from 'lit/decorators.js'
-import type { Balance } from '@web3modal/common'
+import type { Balance } from '@lista-wallet/common'
 
 @customElement('w3m-wallet-send-select-token-view')
 export class W3mSendSelectTokenView extends LitElement {

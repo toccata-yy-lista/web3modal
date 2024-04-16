@@ -11,10 +11,10 @@ import {
   NetworkController,
   ConnectionController,
   RouterUtil
-} from '@web3modal/core'
+} from '@lista-wallet/core'
 
 import { ConstantsUtil } from '../core/utils/ConstantsUtil.js'
-import { HelpersUtil } from '@web3modal/scaffold-utils'
+import { HelpersUtil } from '@lista-wallet/scaffold-utils'
 
 // -- Client -------------------------------------------------------------------- //
 export class Web3ModalSIWEClient {

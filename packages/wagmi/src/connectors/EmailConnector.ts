@@ -1,9 +1,9 @@
 import { createConnector, normalizeChainId, type CreateConfigParameters } from '@wagmi/core'
-import { W3mFrameProvider } from '@web3modal/wallet'
+import { W3mFrameProvider } from '@lista-wallet/wallet'
 import { SwitchChainError, getAddress } from 'viem'
 import type { Address } from 'viem'
 
-import { ConstantsUtil } from '@web3modal/scaffold-utils'
+import { ConstantsUtil } from '@lista-wallet/scaffold-utils'
 
 // -- Types ----------------------------------------------------------------------------------------
 interface W3mFrameProviderOptions {

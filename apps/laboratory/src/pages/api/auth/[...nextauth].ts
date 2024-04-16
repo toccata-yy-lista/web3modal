@@ -1,4 +1,4 @@
-import type { SIWESession } from '@web3modal/siwe'
+import type { SIWESession } from '@lista-wallet/siwe'
 import type { NextApiRequest, NextApiResponse } from 'next'
 import nextAuth from 'next-auth'
 import credentialsProvider from 'next-auth/providers/credentials'

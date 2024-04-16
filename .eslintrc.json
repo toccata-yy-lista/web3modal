@@ -58,7 +58,7 @@
           {
             "name": "lit/decorators.js",
             "importNames": ["customElement"],
-            "message": "Use import 'customElement' from '@web3modal/ui' instead."
+            "message": "Use import 'customElement' from '@lista-wallet/ui' instead."
           }
         ]
       }

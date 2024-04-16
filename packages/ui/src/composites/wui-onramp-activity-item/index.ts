@@ -6,7 +6,7 @@ import { elementStyles, resetStyles } from '../../utils/ThemeUtil.js'
 import type { ColorType } from '../../utils/TypeUtil.js'
 import { customElement } from '../../utils/WebComponentsUtil.js'
 import styles from './styles.js'
-import { ApiController } from '@web3modal/core'
+import { ApiController } from '@lista-wallet/core'
 
 @customElement('wui-onramp-activity-item')
 export class WuiOnRampActivityItem extends LitElement {

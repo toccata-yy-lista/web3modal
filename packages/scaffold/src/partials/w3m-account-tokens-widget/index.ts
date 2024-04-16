@@ -1,5 +1,5 @@
-import { AccountController, RouterController } from '@web3modal/core'
-import { customElement } from '@web3modal/ui'
+import { AccountController, RouterController } from '@lista-wallet/core'
+import { customElement } from '@lista-wallet/ui'
 import { LitElement, html } from 'lit'
 import styles from './styles.js'
 import { state } from 'lit/decorators.js'

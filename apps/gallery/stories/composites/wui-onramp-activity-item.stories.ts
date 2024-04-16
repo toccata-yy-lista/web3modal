@@ -1,6 +1,6 @@
 import type { Meta } from '@storybook/web-components'
-import '@web3modal/ui/src/composites/wui-onramp-activity-item'
-import type { WuiOnRampActivityItem } from '@web3modal/ui/src/composites/wui-onramp-activity-item'
+import '@lista-wallet/ui/src/composites/wui-onramp-activity-item'
+import type { WuiOnRampActivityItem } from '@lista-wallet/ui/src/composites/wui-onramp-activity-item'
 import { html } from 'lit'
 import '../../components/gallery-container'
 

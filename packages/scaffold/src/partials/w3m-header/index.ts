@@ -1,4 +1,4 @@
-import type { RouterControllerState } from '@web3modal/core'
+import type { RouterControllerState } from '@lista-wallet/core'
 import {
   ConnectionController,
   ConnectorController,
@@ -6,8 +6,8 @@ import {
   ModalController,
   OptionsController,
   RouterController
-} from '@web3modal/core'
-import { customElement } from '@web3modal/ui'
+} from '@lista-wallet/core'
+import { customElement } from '@lista-wallet/ui'
 import { LitElement, html } from 'lit'
 import { state } from 'lit/decorators.js'
 import styles from './styles.js'
@@ -114,7 +114,7 @@ export class W3mHeader extends LitElement {
 
   private async onClose() {
     if (OptionsController.state.isSiweEnabled) {
-      const { SIWEController } = await import('@web3modal/siwe')
+      const { SIWEController } = await import('@lista-wallet/siwe')
       if (SIWEController.state.status !== 'success') {
         await ConnectionController.disconnect()
       }

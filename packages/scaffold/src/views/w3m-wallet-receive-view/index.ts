@@ -6,8 +6,8 @@ import {
   RouterController,
   SnackController,
   ThemeController
-} from '@web3modal/core'
-import { UiHelperUtil, customElement } from '@web3modal/ui'
+} from '@lista-wallet/core'
+import { UiHelperUtil, customElement } from '@lista-wallet/ui'
 import { LitElement, html } from 'lit'
 import styles from './styles.js'
 import { state } from 'lit/decorators.js'

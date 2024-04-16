@@ -1,6 +1,6 @@
 import type { Meta } from '@storybook/web-components'
-import '@web3modal/ui/src/composites/wui-account-button'
-import type { WuiAccountButton } from '@web3modal/ui/src/composites/wui-account-button'
+import '@lista-wallet/ui/src/composites/wui-account-button'
+import type { WuiAccountButton } from '@lista-wallet/ui/src/composites/wui-account-button'
 import { html } from 'lit'
 import { address, avatarImageSrc, networkImageSrc } from '../../utils/PresetUtils'
 

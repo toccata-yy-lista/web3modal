@@ -67,8 +67,8 @@ async function checkUiPackage() {
       fail(`${f} is using @state decorator, which is not allowed in ui package`)
     }
 
-    if (diff?.added.includes('import @web3modal/core')) {
-      fail(`${f} is importing @web3modal/core, which is not allowed in ui package`)
+    if (diff?.added.includes('import @lista-wallet/core')) {
+      fail(`${f} is importing @lista-wallet/core, which is not allowed in ui package`)
     }
 
     if (!diff?.added.includes(RENDER_COMMENT) && diff?.added.includes('render()')) {
@@ -89,7 +89,7 @@ async function checkUiPackage() {
       fail(`${f} is a ui element, but does not define wui- prefix`)
     }
 
-    if (diff?.added.includes('@web3modal/ui/')) {
+    if (diff?.added.includes('@lista-wallet/ui/')) {
       fail(`${f} should use relative imports instead of direct package access`)
     }
   }
@@ -182,8 +182,8 @@ async function checkCorePackage() {
   for (const f of created_core_controllers) {
     const diff = await diffForFile(f)
 
-    if (diff?.added.includes('import @web3modal/ui')) {
-      fail(`${f} is importing @web3modal/ui, which is not allowed in core package`)
+    if (diff?.added.includes('import @lista-wallet/ui')) {
+      fail(`${f} is importing @lista-wallet/ui, which is not allowed in core package`)
     }
 
     if (!diff?.added.includes(TYPE_COMMENT)) {
@@ -202,7 +202,7 @@ async function checkCorePackage() {
       fail(`${f} is using this.state, use just state`)
     }
 
-    if (diff?.added.includes('@web3modal/core/')) {
+    if (diff?.added.includes('@lista-wallet/core/')) {
       fail(`${f} should use relative imports instead of direct package access`)
     }
 
@@ -254,9 +254,9 @@ async function checkScaffoldHtmlPackage() {
     }
 
     if (
-      diff?.added.includes('@web3modal/core/') ||
-      diff?.added.includes('@web3modal/ui/') ||
-      diff?.added.includes('@web3modal/scaffold/')
+      diff?.added.includes('@lista-wallet/core/') ||
+      diff?.added.includes('@lista-wallet/ui/') ||
+      diff?.added.includes('@lista-wallet/scaffold/')
     ) {
       fail(`${f} should use relative imports instead of direct package access`)
     }
@@ -271,12 +271,12 @@ async function checkClientPackages() {
   for (const f of wagmi_files) {
     const diff = await diffForFile(f)
 
-    if (diff?.added.includes('@web3modal/core')) {
-      fail(`${f} is not allowed to import from @web3modal/core`)
+    if (diff?.added.includes('@lista-wallet/core')) {
+      fail(`${f} is not allowed to import from @lista-wallet/core`)
     }
 
-    if (diff?.added.includes('@web3modal/ui')) {
-      fail(`${f} is not allowed to import from @web3modal/ui`)
+    if (diff?.added.includes('@lista-wallet/ui')) {
+      fail(`${f} is not allowed to import from @lista-wallet/ui`)
     }
   }
 }

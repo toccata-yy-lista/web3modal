@@ -24,19 +24,19 @@ import type {
   NetworkControllerClient,
   PublicStateControllerState,
   Token
-} from '@web3modal/scaffold'
+} from '@lista-wallet/scaffold'
 import type { Hex } from 'viem'
-import { Web3ModalScaffold } from '@web3modal/scaffold'
-import type { Web3ModalSIWEClient } from '@web3modal/siwe'
-import { ConstantsUtil, PresetsUtil, HelpersUtil } from '@web3modal/scaffold-utils'
+import { Web3ModalScaffold } from '@lista-wallet/scaffold'
+import type { Web3ModalSIWEClient } from '@lista-wallet/siwe'
+import { ConstantsUtil, PresetsUtil, HelpersUtil } from '@lista-wallet/scaffold-utils'
 import {
   getCaipDefaultChain,
   getEmailCaipNetworks,
   getWalletConnectCaipNetworks
 } from './utils/helpers.js'
-import { W3mFrameHelpers, W3mFrameRpcConstants } from '@web3modal/wallet'
-import type { W3mFrameProvider } from '@web3modal/wallet'
-import { ConstantsUtil as CoreConstants } from '@web3modal/core'
+import { W3mFrameHelpers, W3mFrameRpcConstants } from '@lista-wallet/wallet'
+import type { W3mFrameProvider } from '@lista-wallet/wallet'
+import { ConstantsUtil as CoreConstants } from '@lista-wallet/core'
 import type { defaultWagmiConfig as coreConfig } from './utils/defaultWagmiCoreConfig.js'
 import type { defaultWagmiConfig as reactConfig } from './utils/defaultWagmiReactConfig.js'
 

@@ -1,9 +1,9 @@
-import { UiHelperUtil, customElement } from '@web3modal/ui'
+import { UiHelperUtil, customElement } from '@lista-wallet/ui'
 import { LitElement, html } from 'lit'
 import styles from './styles.js'
 import { property } from 'lit/decorators.js'
-import { RouterController, SendController } from '@web3modal/core'
-import type { Balance } from '@web3modal/common'
+import { RouterController, SendController } from '@lista-wallet/core'
+import type { Balance } from '@lista-wallet/common'
 
 @customElement('w3m-input-token')
 export class W3mInputToken extends LitElement {

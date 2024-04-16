@@ -1,4 +1,4 @@
-import type { Balance } from '@web3modal/common'
+import type { Balance } from '@lista-wallet/common'
 import { ConstantsUtil } from './ConstantsUtil.js'
 import type { CaipAddress, LinkingRecord, CaipNetwork } from './TypeUtil.js'
 

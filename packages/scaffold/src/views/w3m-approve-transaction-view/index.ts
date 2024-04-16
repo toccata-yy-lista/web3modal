@@ -1,8 +1,8 @@
-import { customElement } from '@web3modal/ui'
+import { customElement } from '@lista-wallet/ui'
 import { LitElement, html } from 'lit'
 import { state } from 'lit/decorators.js'
 import styles from './styles.js'
-import { ModalController, ConnectorController, ThemeController } from '@web3modal/core'
+import { ModalController, ConnectorController, ThemeController } from '@lista-wallet/core'
 
 @customElement('w3m-approve-transaction-view')
 export class W3mApproveTransactionView extends LitElement {

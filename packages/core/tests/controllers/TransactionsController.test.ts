@@ -4,7 +4,7 @@ import {
   ONRAMP_TRANSACTIONS_RESPONSES_FEB,
   ONRAMP_TRANSACTIONS_RESPONSES_JAN
 } from '../constants/OnrampTransactions.js'
-import type { Transaction } from '@web3modal/common'
+import type { Transaction } from '@lista-wallet/common'
 
 // -- Constants ----------------------------------------------------------------
 const projectId = '123'

@@ -1,6 +1,6 @@
 import type { Meta } from '@storybook/web-components'
-import '@web3modal/ui/src/composites/wui-banner'
-import type { WuiBanner } from '@web3modal/ui/src/composites/wui-banner'
+import '@lista-wallet/ui/src/composites/wui-banner'
+import type { WuiBanner } from '@lista-wallet/ui/src/composites/wui-banner'
 import { html } from 'lit'
 import { iconOptions } from '../../utils/PresetUtils'
 import '../../components/gallery-container'

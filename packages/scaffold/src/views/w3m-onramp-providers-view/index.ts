@@ -7,11 +7,11 @@ import {
   RouterController,
   NetworkController,
   BlockchainApiController
-} from '@web3modal/core'
-import { customElement } from '@web3modal/ui'
+} from '@lista-wallet/core'
+import { customElement } from '@lista-wallet/ui'
 import { LitElement, html } from 'lit'
 import { state } from 'lit/decorators.js'
-import type { CoinbasePaySDKChainNameValues } from '@web3modal/core/src/utils/ConstantsUtil'
+import type { CoinbasePaySDKChainNameValues } from '@lista-wallet/core/src/utils/ConstantsUtil'
 
 @customElement('w3m-onramp-providers-view')
 export class W3mOnRampProvidersView extends LitElement {

@@ -1,4 +1,4 @@
-import type { ConnectorType } from '@web3modal/core'
+import type { ConnectorType } from '@lista-wallet/core'
 import { ConstantsUtil } from './ConstantsUtil.js'
 
 export const PresetsUtil = {

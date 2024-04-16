@@ -6,7 +6,7 @@ import type {
   SIWECreateMessageArgs,
   SIWEVerifyMessageArgs
 } from '../utils/TypeUtils.js'
-import { OptionsController } from '@web3modal/core'
+import { OptionsController } from '@lista-wallet/core'
 
 // -- Types --------------------------------------------- //
 export interface SIWEControllerClient extends SIWEClientMethods {

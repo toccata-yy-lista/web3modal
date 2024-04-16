@@ -1,6 +1,6 @@
 import type { Meta } from '@storybook/web-components'
-import '@web3modal/ui/src/composites/wui-icon-box'
-import type { WuiIconBox } from '@web3modal/ui/src/composites/wui-icon-box'
+import '@lista-wallet/ui/src/composites/wui-icon-box'
+import type { WuiIconBox } from '@lista-wallet/ui/src/composites/wui-icon-box'
 import { html } from 'lit'
 
 import {

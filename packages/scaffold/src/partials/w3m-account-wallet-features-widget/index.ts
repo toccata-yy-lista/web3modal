@@ -5,8 +5,8 @@ import {
   AssetUtil,
   RouterController,
   CoreHelperUtil
-} from '@web3modal/core'
-import { customElement } from '@web3modal/ui'
+} from '@lista-wallet/core'
+import { customElement } from '@lista-wallet/ui'
 import { LitElement, html } from 'lit'
 import { state } from 'lit/decorators.js'
 import { ifDefined } from 'lit/directives/if-defined.js'

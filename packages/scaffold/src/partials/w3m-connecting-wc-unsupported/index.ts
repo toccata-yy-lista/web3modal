@@ -1,5 +1,5 @@
-import { AssetUtil, EventsController, RouterController } from '@web3modal/core'
-import { customElement } from '@web3modal/ui'
+import { AssetUtil, EventsController, RouterController } from '@lista-wallet/core'
+import { customElement } from '@lista-wallet/ui'
 import { LitElement, html } from 'lit'
 import { ifDefined } from 'lit/directives/if-defined.js'
 

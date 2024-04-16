@@ -1,5 +1,5 @@
 {
-  "name": "@web3modal/core",
+  "name": "@lista-wallet/core",
   "version": "4.1.1",
   "type": "module",
   "main": "./dist/esm/index.js",
@@ -18,8 +18,8 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
-    "@web3modal/common": "4.1.1",
-    "@web3modal/wallet": "4.1.1",
+    "@lista-wallet/common": "4.1.1",
+    "@lista-wallet/wallet": "4.1.1",
     "valtio": "1.11.2"
   },
   "devDependencies": {

@@ -9,11 +9,11 @@ import type {
   NetworkControllerClient,
   PublicStateControllerState,
   Token
-} from '@web3modal/scaffold'
-import { Web3ModalScaffold } from '@web3modal/scaffold'
-import { ConstantsUtil, PresetsUtil, HelpersUtil } from '@web3modal/scaffold-utils'
+} from '@lista-wallet/scaffold'
+import { Web3ModalScaffold } from '@lista-wallet/scaffold'
+import { ConstantsUtil, PresetsUtil, HelpersUtil } from '@lista-wallet/scaffold-utils'
 import EthereumProvider from '@walletconnect/ethereum-provider'
-import type { Web3ModalSIWEClient } from '@web3modal/siwe'
+import type { Web3ModalSIWEClient } from '@lista-wallet/siwe'
 import type {
   Address,
   Metadata,
@@ -21,7 +21,7 @@ import type {
   ProviderType,
   Chain,
   EthersStoreUtilState
-} from '@web3modal/scaffold-utils/ethers'
+} from '@lista-wallet/scaffold-utils/ethers'
 import {
   formatEther,
   JsonRpcProvider,
@@ -32,11 +32,11 @@ import {
   EthersConstantsUtil,
   EthersHelpersUtil,
   EthersStoreUtil
-} from '@web3modal/scaffold-utils/ethers'
+} from '@lista-wallet/scaffold-utils/ethers'
 import type { EthereumProviderOptions } from '@walletconnect/ethereum-provider'
 import type { Eip1193Provider } from 'ethers'
-import { W3mFrameProvider, W3mFrameHelpers, W3mFrameRpcConstants } from '@web3modal/wallet'
-import type { CombinedProvider } from '@web3modal/scaffold-utils/ethers'
+import { W3mFrameProvider, W3mFrameHelpers, W3mFrameRpcConstants } from '@lista-wallet/wallet'
+import type { CombinedProvider } from '@lista-wallet/scaffold-utils/ethers'
 
 // -- Types ---------------------------------------------------------------------
 export interface Web3ModalClientOptions extends Omit<LibraryOptions, 'defaultChain' | 'tokens'> {

@@ -1,16 +1,16 @@
-import { DateUtil } from '@web3modal/common'
-import type { Transaction, TransactionImage } from '@web3modal/common'
+import { DateUtil } from '@lista-wallet/common'
+import type { Transaction, TransactionImage } from '@lista-wallet/common'
 import {
   AccountController,
   EventsController,
   OptionsController,
   RouterController,
   TransactionsController
-} from '@web3modal/core'
-import { TransactionUtil, customElement } from '@web3modal/ui'
+} from '@lista-wallet/core'
+import { TransactionUtil, customElement } from '@lista-wallet/ui'
 import { LitElement, html } from 'lit'
 import { property, state } from 'lit/decorators.js'
-import type { TransactionType } from '@web3modal/ui/src/utils/TypeUtil.js'
+import type { TransactionType } from '@lista-wallet/ui/src/utils/TypeUtil.js'
 import styles from './styles.js'
 
 // -- Helpers --------------------------------------------- //

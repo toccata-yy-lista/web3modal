@@ -1,4 +1,4 @@
-import type { CaipNetworkId, Tokens } from '@web3modal/core'
+import type { CaipNetworkId, Tokens } from '@lista-wallet/core'
 import { ConstantsUtil } from './ConstantsUtil.js'
 
 export const HelpersUtil = {

@@ -10,8 +10,8 @@ import {
   SnackController,
   StorageUtil,
   ConnectorController
-} from '@web3modal/core'
-import { UiHelperUtil, customElement } from '@web3modal/ui'
+} from '@lista-wallet/core'
+import { UiHelperUtil, customElement } from '@lista-wallet/ui'
 import { LitElement, html } from 'lit'
 import { state } from 'lit/decorators.js'
 import { ifDefined } from 'lit/directives/if-defined.js'

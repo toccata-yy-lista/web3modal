@@ -6,7 +6,7 @@ import type {
   W3mNetworkButton,
   W3mOnrampWidget,
   Web3ModalScaffold
-} from '@web3modal/scaffold'
+} from '@lista-wallet/scaffold'
 
 type OpenOptions = Parameters<Web3ModalScaffold['open']>[0]
 

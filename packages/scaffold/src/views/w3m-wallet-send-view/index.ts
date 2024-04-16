@@ -1,7 +1,7 @@
-import { customElement } from '@web3modal/ui'
+import { customElement } from '@lista-wallet/ui'
 import { LitElement, html } from 'lit'
 import styles from './styles.js'
-import { CoreHelperUtil, RouterController, SendController } from '@web3modal/core'
+import { CoreHelperUtil, RouterController, SendController } from '@lista-wallet/core'
 import { state } from 'lit/decorators.js'
 
 @customElement('w3m-wallet-send-view')

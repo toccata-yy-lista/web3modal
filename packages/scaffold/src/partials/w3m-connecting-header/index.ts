@@ -1,6 +1,6 @@
-import type { Platform } from '@web3modal/core'
-import { ConnectionController } from '@web3modal/core'
-import { customElement } from '@web3modal/ui'
+import type { Platform } from '@lista-wallet/core'
+import { ConnectionController } from '@lista-wallet/core'
+import { customElement } from '@lista-wallet/ui'
 import { LitElement, html } from 'lit'
 import { property, state } from 'lit/decorators.js'
 

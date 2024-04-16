@@ -26,8 +26,8 @@ import type {
   ThemeType,
   TransactionType,
   VisualType
-} from '@web3modal/ui/src/utils/TypeUtil'
-import type { TransactionStatus, TransactionDirection } from '@web3modal/common'
+} from '@lista-wallet/ui/src/utils/TypeUtil'
+import type { TransactionStatus, TransactionDirection } from '@lista-wallet/common'
 
 export const colorOptions: ColorType[] = [
   'accent-100',

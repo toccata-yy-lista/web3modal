@@ -1,6 +1,6 @@
 import type { Meta } from '@storybook/web-components'
-import '@web3modal/ui/src/components/wui-loading-thumbnail'
-import type { WuiLoadingThumbnail } from '@web3modal/ui/src/components/wui-loading-thumbnail'
+import '@lista-wallet/ui/src/components/wui-loading-thumbnail'
+import type { WuiLoadingThumbnail } from '@lista-wallet/ui/src/components/wui-loading-thumbnail'
 import { html } from 'lit'
 
 type Component = Meta<WuiLoadingThumbnail>

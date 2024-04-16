@@ -1,5 +1,5 @@
-import { customElement } from '@web3modal/ui'
-import { RouterController } from '@web3modal/core'
+import { customElement } from '@lista-wallet/ui'
+import { RouterController } from '@lista-wallet/core'
 import { LitElement, html } from 'lit'
 
 @customElement('w3m-what-is-a-buy-view')

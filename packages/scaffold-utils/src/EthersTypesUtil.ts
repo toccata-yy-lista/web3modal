@@ -1,4 +1,4 @@
-import type { W3mFrameProvider } from '@web3modal/wallet'
+import type { W3mFrameProvider } from '@lista-wallet/wallet'
 
 export interface IEthersConfig {
   providers: ProviderType

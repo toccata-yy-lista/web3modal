@@ -7,7 +7,7 @@ import {
   useWeb3ModalEvents,
   useWeb3ModalState,
   useWeb3ModalTheme
-} from '@web3modal/wagmi/vue'
+} from '@lista-wallet/wagmi/vue'
 
 // @ts-expect-error 1. Get projectId
 const projectId = import.meta.env.VITE_PROJECT_ID

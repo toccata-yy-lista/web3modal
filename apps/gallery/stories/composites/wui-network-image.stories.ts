@@ -1,6 +1,6 @@
 import type { Meta } from '@storybook/web-components'
-import '@web3modal/ui/src/composites/wui-network-image'
-import type { WuiNetworkImage } from '@web3modal/ui/src/composites/wui-network-image'
+import '@lista-wallet/ui/src/composites/wui-network-image'
+import type { WuiNetworkImage } from '@lista-wallet/ui/src/composites/wui-network-image'
 import { html } from 'lit'
 import { networkImageSrc } from '../../utils/PresetUtils'
 

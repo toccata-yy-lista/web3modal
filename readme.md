@@ -55,7 +55,7 @@ npm run changeset pre enter [tag]
 3. Merge your feature branch into `V4`
 4. Create a new branch from `V4` and name it with the version tag
 5. Run `npm changeset` and set new custom version, enter prelease mode first if you want to add a tag to the version.
-6. Update version in `ConstantsUtil` in `@web3modal/scaffold-utils` to the correct version
+6. Update version in `ConstantsUtil` in `@lista-wallet/scaffold-utils` to the correct version
 7. Create a new `PR` with Release Notes and merge into `V4`
 8. Checkout `V4` and run `npm run publish:latest`
 9. Draft a new release in GitHub and create new tag

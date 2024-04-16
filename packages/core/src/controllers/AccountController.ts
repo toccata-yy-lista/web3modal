@@ -2,7 +2,7 @@ import { subscribeKey as subKey } from 'valtio/utils'
 import { proxy, ref, subscribe as sub } from 'valtio/vanilla'
 import { CoreHelperUtil } from '../utils/CoreHelperUtil.js'
 import type { CaipAddress } from '../utils/TypeUtil.js'
-import type { Balance } from '@web3modal/common'
+import type { Balance } from '@lista-wallet/common'
 import { BlockchainApiController } from './BlockchainApiController.js'
 import { SnackController } from './SnackController.js'
 

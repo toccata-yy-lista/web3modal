@@ -1,7 +1,7 @@
 import { http } from '@wagmi/core'
 import type { Chain } from '@wagmi/core/chains'
-import { CoreHelperUtil } from '@web3modal/scaffold'
-import { ConstantsUtil, PresetsUtil } from '@web3modal/scaffold-utils'
+import { CoreHelperUtil } from '@lista-wallet/scaffold'
+import { ConstantsUtil, PresetsUtil } from '@lista-wallet/scaffold-utils'
 
 // -- Helpers ------------------------------------------------------------------
 const RPC_URL = CoreHelperUtil.getBlockchainApiUrl()

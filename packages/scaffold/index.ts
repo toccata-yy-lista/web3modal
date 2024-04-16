@@ -70,5 +70,5 @@ export * from './src/partials/w3m-wallet-send-details/index.js'
 export { Web3ModalScaffold } from './src/client.js'
 export type { LibraryOptions, ScaffoldOptions } from './src/client.js'
 
-export type * from '@web3modal/core'
-export { CoreHelperUtil } from '@web3modal/core'
+export type * from '@lista-wallet/core'
+export { CoreHelperUtil } from '@lista-wallet/core'

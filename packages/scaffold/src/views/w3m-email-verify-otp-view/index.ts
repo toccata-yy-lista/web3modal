@@ -1,7 +1,7 @@
-import { customElement } from '@web3modal/ui'
+import { customElement } from '@lista-wallet/ui'
 import { W3mEmailOtpWidget } from '../../utils/w3m-email-otp-widget/index.js'
 import type { OnOtpSubmitFn, OnOtpResendFn } from '../../utils/w3m-email-otp-widget/index.js'
-import { EventsController, ConnectionController, ModalController } from '@web3modal/core'
+import { EventsController, ConnectionController, ModalController } from '@lista-wallet/core'
 
 @customElement('w3m-email-verify-otp-view')
 export class W3mEmailVerifyOtpView extends W3mEmailOtpWidget {

@@ -1,5 +1,5 @@
-import type { W3mFrameProvider } from '@web3modal/wallet'
-import type { Balance, Transaction } from '@web3modal/common'
+import type { W3mFrameProvider } from '@lista-wallet/wallet'
+import type { Balance, Transaction } from '@lista-wallet/common'
 
 export type CaipAddress = `${string}:${string}:${string}`
 

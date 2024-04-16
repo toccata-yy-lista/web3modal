@@ -4,10 +4,10 @@ import {
   CoreHelperUtil,
   ModalController,
   NetworkController
-} from '@web3modal/core'
+} from '@lista-wallet/core'
 
-import type { WuiAccountButton } from '@web3modal/ui'
-import { customElement } from '@web3modal/ui'
+import type { WuiAccountButton } from '@lista-wallet/ui'
+import { customElement } from '@lista-wallet/ui'
 import { LitElement, html } from 'lit'
 import { property, state } from 'lit/decorators.js'
 import { ifDefined } from 'lit/directives/if-defined.js'

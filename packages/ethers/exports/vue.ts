@@ -1,7 +1,7 @@
 import type { Web3ModalOptions } from '../src/client.js'
 import { Web3Modal } from '../src/client.js'
-import { ConstantsUtil } from '@web3modal/scaffold-utils'
-import { getWeb3Modal } from '@web3modal/scaffold-vue'
+import { ConstantsUtil } from '@lista-wallet/scaffold-utils'
+import { getWeb3Modal } from '@lista-wallet/scaffold-vue'
 import { onUnmounted, ref } from 'vue'
 import type { Eip1193Provider } from 'ethers'
 // -- Types -------------------------------------------------------------------
@@ -117,7 +117,7 @@ export {
   useWeb3Modal,
   useWeb3ModalState,
   useWeb3ModalEvents
-} from '@web3modal/scaffold-vue'
+} from '@lista-wallet/scaffold-vue'
 
 // -- Universal Exports -------------------------------------------------------
 export { defaultConfig } from '../src/utils/defaultConfig.js'

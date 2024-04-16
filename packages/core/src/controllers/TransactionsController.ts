@@ -1,4 +1,4 @@
-import type { Transaction } from '@web3modal/common'
+import type { Transaction } from '@lista-wallet/common'
 import { proxy, subscribe as sub } from 'valtio/vanilla'
 import { OptionsController } from './OptionsController.js'
 import { EventsController } from './EventsController.js'

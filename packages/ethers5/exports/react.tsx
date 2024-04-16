@@ -2,9 +2,9 @@
 
 import type { Web3ModalOptions } from '../src/client.js'
 import { Web3Modal } from '../src/client.js'
-import { ConstantsUtil } from '@web3modal/scaffold-utils'
-import { EthersStoreUtil } from '@web3modal/scaffold-utils/ethers'
-import { getWeb3Modal } from '@web3modal/scaffold-react'
+import { ConstantsUtil } from '@lista-wallet/scaffold-utils'
+import { EthersStoreUtil } from '@lista-wallet/scaffold-utils/ethers'
+import { getWeb3Modal } from '@lista-wallet/scaffold-react'
 import { useSnapshot } from 'valtio'
 import { ethers } from 'ethers'
 
@@ -82,7 +82,7 @@ export {
   useWeb3Modal,
   useWeb3ModalState,
   useWeb3ModalEvents
-} from '@web3modal/scaffold-react'
+} from '@lista-wallet/scaffold-react'
 
 // -- Universal Exports -------------------------------------------------------
 export { defaultConfig } from '../src/utils/defaultConfig.js'

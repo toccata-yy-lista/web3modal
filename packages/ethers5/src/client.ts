@@ -9,10 +9,10 @@ import type {
   NetworkControllerClient,
   PublicStateControllerState,
   Token
-} from '@web3modal/scaffold'
-import { Web3ModalScaffold } from '@web3modal/scaffold'
-import type { Web3ModalSIWEClient } from '@web3modal/siwe'
-import { ConstantsUtil, PresetsUtil, HelpersUtil } from '@web3modal/scaffold-utils'
+} from '@lista-wallet/scaffold'
+import { Web3ModalScaffold } from '@lista-wallet/scaffold'
+import type { Web3ModalSIWEClient } from '@lista-wallet/siwe'
+import { ConstantsUtil, PresetsUtil, HelpersUtil } from '@lista-wallet/scaffold-utils'
 import EthereumProvider from '@walletconnect/ethereum-provider'
 import type {
   Address,
@@ -21,13 +21,13 @@ import type {
   Chain,
   Provider,
   EthersStoreUtilState
-} from '@web3modal/scaffold-utils/ethers'
+} from '@lista-wallet/scaffold-utils/ethers'
 import { ethers, utils } from 'ethers'
 import {
   EthersConstantsUtil,
   EthersHelpersUtil,
   EthersStoreUtil
-} from '@web3modal/scaffold-utils/ethers'
+} from '@lista-wallet/scaffold-utils/ethers'
 import type { EthereumProviderOptions } from '@walletconnect/ethereum-provider'
 import { isTrustProvider } from './utils/helper.js'
 

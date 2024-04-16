@@ -1,9 +1,9 @@
-import { CoreHelperUtil } from '@web3modal/scaffold'
-import { ConstantsUtil, PresetsUtil } from '@web3modal/scaffold-utils'
+import { CoreHelperUtil } from '@lista-wallet/scaffold'
+import { ConstantsUtil, PresetsUtil } from '@lista-wallet/scaffold-utils'
 import { EthereumProvider } from '@walletconnect/ethereum-provider'
 import { http } from 'viem'
 
-import type { CaipNetwork, CaipNetworkId } from '@web3modal/scaffold'
+import type { CaipNetwork, CaipNetworkId } from '@lista-wallet/scaffold'
 import type { Chain } from '@wagmi/core/chains'
 import type { Connector } from '@wagmi/core'
 

@@ -2,7 +2,7 @@
 
 import { config, projectId } from '@/config'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { createWeb3Modal } from '@web3modal/wagmi/react'
+import { createWeb3Modal } from '@lista-wallet/wagmi/react'
 import React, { ReactNode } from 'react'
 import { State, WagmiProvider } from 'wagmi'
 

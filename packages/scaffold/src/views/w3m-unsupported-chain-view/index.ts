@@ -9,10 +9,10 @@ import {
   RouterController,
   RouterUtil,
   SnackController
-} from '@web3modal/core'
+} from '@lista-wallet/core'
 
-import type { CaipNetwork } from '@web3modal/core'
-import { customElement } from '@web3modal/ui'
+import type { CaipNetwork } from '@lista-wallet/core'
+import { customElement } from '@lista-wallet/ui'
 import { LitElement, html } from 'lit'
 import { state } from 'lit/decorators.js'
 import { ifDefined } from 'lit/directives/if-defined.js'

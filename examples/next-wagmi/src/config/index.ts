@@ -1,4 +1,4 @@
-import { defaultWagmiConfig } from '@web3modal/wagmi/react/config'
+import { defaultWagmiConfig } from '@lista-wallet/wagmi/react/config'
 import { cookieStorage, createStorage } from 'wagmi'
 import { mainnet, sepolia } from 'wagmi/chains'
 

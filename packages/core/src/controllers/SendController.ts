@@ -1,6 +1,6 @@
 import { subscribeKey as subKey } from 'valtio/utils'
 import { proxy, ref, subscribe as sub } from 'valtio/vanilla'
-import type { Balance } from '@web3modal/common'
+import type { Balance } from '@lista-wallet/common'
 
 // -- Types --------------------------------------------- //
 export interface SendControllerState {

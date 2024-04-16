@@ -1,6 +1,6 @@
 import type { Meta } from '@storybook/web-components'
-import '@web3modal/ui/src/composites/wui-tooltip-select'
-import type { WuiTooltipSelect } from '@web3modal/ui/src/composites/wui-tooltip-select'
+import '@lista-wallet/ui/src/composites/wui-tooltip-select'
+import type { WuiTooltipSelect } from '@lista-wallet/ui/src/composites/wui-tooltip-select'
 import { html } from 'lit'
 import '../../components/gallery-container'
 import { iconOptions } from '../../utils/PresetUtils'

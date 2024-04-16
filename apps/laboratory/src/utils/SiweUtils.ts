@@ -1,7 +1,7 @@
 import { SiweMessage } from 'siwe'
 import { getCsrfToken, signIn, signOut, getSession } from 'next-auth/react'
-import type { SIWEVerifyMessageArgs, SIWECreateMessageArgs, SIWESession } from '@web3modal/siwe'
-import { createSIWEConfig } from '@web3modal/siwe'
+import type { SIWEVerifyMessageArgs, SIWECreateMessageArgs, SIWESession } from '@lista-wallet/siwe'
+import { createSIWEConfig } from '@lista-wallet/siwe'
 
 export const siweConfig = createSIWEConfig({
   createMessage: ({ nonce, address, chainId }: SIWECreateMessageArgs) =>
