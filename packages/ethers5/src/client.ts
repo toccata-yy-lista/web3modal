@@ -460,8 +460,10 @@ export class Web3Modal extends Web3ModalScaffold {
 
     if (InjectedProvider) {
       if (walletId === ConstantsUtil.INJECTED_CONNECTOR_ID) {
-        this.setInjectedProvider(config)
-        this.watchInjected(config)
+        InjectedProvider.request({ method: 'eth_requestAccounts' }).then(() => {
+          this.setInjectedProvider(config)
+          this.watchInjected(config)
+        })
       }
     }
   }
@@ -490,7 +492,9 @@ export class Web3Modal extends Web3ModalScaffold {
         provider => provider.name === currentActiveWallet
       )
       if (currentProvider) {
-        this.setEIP6963Provider(currentProvider.provider, currentProvider.name)
+        currentProvider.provider.request({ method: 'eth_requestAccounts' }).then(() => {
+          this.setEIP6963Provider(currentProvider.provider, currentProvider.name)
+        })
       }
     }
   }
