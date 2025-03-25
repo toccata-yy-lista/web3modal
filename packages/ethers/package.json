@@ -1,6 +1,6 @@
 {
   "name": "@lista-wallet/ethers",
-  "version": "4.1.1",
+  "version": "4.1.2-alpha",
   "type": "module",
   "main": "./dist/esm/exports/index.js",
   "types": "./dist/types/exports/index.d.ts",
@@ -46,19 +46,19 @@
   "dependencies": {
     "@coinbase/wallet-sdk": "3.9.1",
     "@walletconnect/ethereum-provider": "2.11.1",
-    "@lista-wallet/polyfills": "4.1.1",
-    "@lista-wallet/scaffold": "4.1.1",
-    "@lista-wallet/scaffold-react": "4.1.1",
-    "@lista-wallet/scaffold-utils": "4.1.1",
-    "@lista-wallet/scaffold-vue": "4.1.1",
-    "valtio": "1.11.2"
+    "@lista-wallet/polyfills": "4.1.2-alpha",
+    "@lista-wallet/scaffold": "4.1.2-alpha",
+    "@lista-wallet/scaffold-react": "4.1.2-alpha",
+    "@lista-wallet/scaffold-utils": "4.1.2-alpha",
+    "@lista-wallet/scaffold-vue": "4.1.2-alpha"
   },
   "peerDependencies": {
-    "@lista-wallet/siwe": "4.1.1",
+    "@lista-wallet/siwe": "4.1.2-alpha",
     "ethers": ">=6.0.0",
     "react": ">=17",
     "react-dom": ">=17",
-    "vue": ">=3"
+    "vue": ">=3",
+    "valtio": "2.1.4"
   },
   "devDependencies": {
     "react": "18.2.0",
@@ -80,7 +80,7 @@
     }
   },
   "optionalDependencies": {
-    "@lista-wallet/siwe": "4.1.1",
+    "@lista-wallet/siwe": "4.1.2-alpha",
     "react": ">=17",
     "react-dom": ">=17",
     "vue": ">=3"

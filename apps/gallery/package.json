@@ -1,6 +1,6 @@
 {
   "name": "@apps/gallery",
-  "version": "4.1.1",
+  "version": "4.1.2-alpha",
   "private": true,
   "main": "index.js",
   "scripts": {
@@ -9,8 +9,8 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
-    "@lista-wallet/common": "4.1.1",
-    "@lista-wallet/ui": "4.1.1",
+    "@lista-wallet/common": "4.1.2-alpha",
+    "@lista-wallet/ui": "4.1.2-alpha",
     "lit": "3.1.0",
     "storybook": "7.6.7"
   },

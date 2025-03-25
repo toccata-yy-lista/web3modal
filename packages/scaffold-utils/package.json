@@ -1,6 +1,6 @@
 {
   "name": "@lista-wallet/scaffold-utils",
-  "version": "4.1.1",
+  "version": "4.1.2-alpha",
   "type": "module",
   "main": "./dist/esm/exports/index.js",
   "types": "./dist/types/exports/index.d.ts",
@@ -36,9 +36,11 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
-    "@lista-wallet/core": "4.1.1",
-    "@lista-wallet/polyfills": "4.1.1",
-    "valtio": "1.11.2"
+    "@lista-wallet/core": "4.1.2-alpha",
+    "@lista-wallet/polyfills": "4.1.2-alpha"
+  },
+  "peerDependencies": {
+    "valtio": "2.1.4"
   },
   "keywords": [
     "web3",
